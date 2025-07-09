@@ -20,6 +20,11 @@ npm i
 npm run dev
 ```
 
+# environmental variables
+```bash
+VITE_SUPABASE_ANON_KEY='your_supabase_anon_key' #supabase edge function set for fluterwave payment verification
+VITE_FLUTTERWAVE_PUBLIC_KEY='flutterwavepubkey'
+```
 ## What technologies are used for this project?
 
 This project is built with:
