@@ -35,7 +35,7 @@ const Cart = ({ isOpen, onClose, items, onRemoveItem, onUpdateQuantity }: CartPr
   const [isCheckingOut, setIsCheckingOut] = useState(false);
 
   const subtotal = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
-  const shipping = subtotal > 5000 ? 0 : 300;
+  const shipping = subtotal > 5000 ? 0 : 0;
   const total = subtotal + shipping;
 
   const handleCheckout = () => {
@@ -97,11 +97,15 @@ const Cart = ({ isOpen, onClose, items, onRemoveItem, onUpdateQuantity }: CartPr
             // verifyPayment function calling Supabase edge function
             const result = await fetch('https://vgnvqmunurawbtwvmmgt.supabase.co/functions/v1/verify-payment', {
               method: 'POST',
-              headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
+              headers: { 
+                'Content-Type': 'application/json', 
+                // 'Access-Control-Allow-Origin': '*'
+                'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`
+              },
               body: JSON.stringify({ transaction_id: response.transaction_id })
             }).then(res => res.json());
 
-            if (result.status === 'success' && result.data.status === 'successful') {
+            if (result.message === 'Payment verified and saved' &&  result.data.status === 'successful') { //result.status === 'success' && result.data.status === 'successful
               await sendPaymentNotification(customerDetails.phone, total, response.tx_ref);
               toast({
                 title: "Payment Successful!",
