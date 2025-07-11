@@ -21,9 +21,10 @@ interface CartProps {
   items: CartItem[];
   onRemoveItem: (id: number, selectedSize: string) => void;
   onUpdateQuantity: (id: number, selectedSize: string, quantity: number) => void;
+  onClearCart: () => void;
 }
 
-const Cart = ({ isOpen, onClose, items, onRemoveItem, onUpdateQuantity }: CartProps) => {
+const Cart = ({ isOpen, onClose, items, onRemoveItem, onUpdateQuantity, onClearCart}: CartProps) => {
   const { toast } = useToast();
   const [checkoutStep, setCheckoutStep] = useState<'cart' | 'details' | 'payment'>('cart');
   const [customerDetails, setCustomerDetails] = useState({
@@ -113,6 +114,7 @@ const Cart = ({ isOpen, onClose, items, onRemoveItem, onUpdateQuantity }: CartPr
               });
               setCheckoutStep('cart');
               setCustomerDetails({ email: '', phone: '', name: '', address: '' });
+              onClearCart();
               onClose();
             } else {
               toast({
