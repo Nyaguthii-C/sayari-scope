@@ -12,6 +12,9 @@ const Index = () => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const clearCart = () => {
+    setCartItems([]);
+  };
 
   const products: Product[] = [
     {
@@ -352,6 +355,7 @@ const Index = () => {
         items={cartItems}
         onRemoveItem={removeFromCart}
         onUpdateQuantity={updateQuantity}
+        onClearCart={clearCart}
       />
     </div>
   );
