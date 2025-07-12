@@ -1,26 +1,23 @@
-
-import { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import AdminDashboard from "@/components/AdminDashboard";
 import { Product, Order } from "@/types";
 
-// Mock admin credentials - in a real app, this would be handled by backend
+// Demo credentials
 const ADMIN_EMAIL = "admin@maasaicraft.com";
 const ADMIN_PASSWORD = "admin123";
 
 const Admin = () => {
   const { toast } = useToast();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [isDashboardOpen, setIsDashboardOpen] = useState(true);
 
-  // Mock products data for admin dashboard
   const products: Product[] = [
     {
       id: 1,
@@ -68,32 +65,32 @@ const Admin = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
       setIsAuthenticated(true);
       toast({
         title: "Login successful",
-        description: "Welcome to the admin dashboard.",
+        description: "Welcome to the admin dashboard."
       });
     } else {
       toast({
         title: "Login failed",
         description: "Invalid email or password.",
-        variant: "destructive",
+        variant: "destructive"
       });
     }
+
     setIsLoading(false);
   };
 
   const handleLogout = () => {
     setIsAuthenticated(false);
-    setEmail('');
-    setPassword('');
+    setEmail("");
+    setPassword("");
     toast({
       title: "Logged out",
-      description: "You have been successfully logged out.",
+      description: "You have been successfully logged out."
     });
   };
 
@@ -128,15 +125,13 @@ const Admin = () => {
             </div>
           </div>
         </header>
-        
-        <div className="container mx-auto px-4 py-8">
+
+        <main className="container mx-auto px-4 py-8">
           <AdminDashboard
-            isOpen={isDashboardOpen}
-            onOpenChange={setIsDashboardOpen}
             products={products}
             orders={[]}
           />
-        </div>
+        </main>
       </div>
     );
   }
