@@ -18,6 +18,7 @@ const Admin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [isDashboardOpen, setIsDashboardOpen] = useState(true);
 
   // Mock products data for admin dashboard
   const products: Product[] = [
@@ -130,8 +131,8 @@ const Admin = () => {
         
         <div className="container mx-auto px-4 py-8">
           <AdminDashboard
-            isOpen={true}
-            onClose={() => {}}
+            isOpen={isDashboardOpen}
+            onOpenChange={setIsDashboardOpen}
             products={products}
             orders={[]}
           />

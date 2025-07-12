@@ -15,12 +15,12 @@ import { useToast } from "@/hooks/use-toast";
 
 interface AdminDashboardProps {
   isOpen: boolean;
-  onClose: () => void;
+  onOpenChange: (open: boolean) => void;
   products: Product[];
   orders: Order[];
 }
 
-const AdminDashboard = ({ isOpen, onClose, products, orders }: AdminDashboardProps) => {
+const AdminDashboard = ({ isOpen, onOpenChange, products, orders }: AdminDashboardProps) => {
   const { toast } = useToast();
   const [newProduct, setNewProduct] = useState({
     name: '',
@@ -99,7 +99,7 @@ const AdminDashboard = ({ isOpen, onClose, products, orders }: AdminDashboardPro
   };
 
   return (
-    <Sheet open={isOpen} onOpenChange={onClose}>
+    <Sheet open={isOpen} onOpenChange={onOpenChange}>  
       <SheetContent className="w-full sm:max-w-8xl">
         <SheetHeader>
           <SheetTitle className="text-maasai-black">Admin Dashboard</SheetTitle>
