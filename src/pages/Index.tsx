@@ -424,7 +424,7 @@ const ProductCard = ({ product, onAddToCart }: { product: Product; onAddToCart: 
 
             WhatsApp Chat Button
             <a
-              href="https://wa.me/+254725606012?text=Hi%20I'm%20interested%20in%20your%20products"
+              href="https://wa.me/+254704477431?text=Hi%20I'm%20interested%20in%20your%20products"
               target="_blank"
               rel="noopener noreferrer"
               className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 transition-colors"
