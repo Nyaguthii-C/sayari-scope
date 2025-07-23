@@ -33,7 +33,8 @@ export const createFlutterwaveConfig = (paymentData: PaymentData) => {
       logo: 'https://the-logo-url.com/logo.png',
     },
     meta: {
-      order_summary: items.map(item =>
+      order_summary: JSON.stringify(items),
+      order_summary_text: items.map(item =>
         `${item.name} (${item.quantity} x ${item.price})`
       ).join(', '),
       delivery_address: customerDetails.address || 'Not provided'
