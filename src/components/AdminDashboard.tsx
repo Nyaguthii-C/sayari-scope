@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Card, CardContent, CardDescription, CardHeader, CardTitle
 } from "@/components/ui/card";
@@ -19,10 +19,10 @@ import { useToast } from "@/hooks/use-toast";
 
 interface AdminDashboardProps {
   products: Product[];
-  orders: Order[];
+  // orders: Order[];
 }
-
-const AdminDashboard = ({ products, orders }: AdminDashboardProps) => {
+// orders after products
+const AdminDashboard = ({ products }: AdminDashboardProps) => {
   const { toast } = useToast();
 
   const [newProduct, setNewProduct] = useState<Product>({
@@ -97,6 +97,32 @@ const AdminDashboard = ({ products, orders }: AdminDashboardProps) => {
     const newSizes = newProduct.sizes.filter((_, i) => i !== index);
     setNewProduct({ ...newProduct, sizes: newSizes });
   };
+
+const [orders, setOrders] = useState<Order[]>([]);
+
+useEffect(() => {
+  const fetchOrders = async () => {
+    try {
+      const res = await fetch("https://vgnvqmunurawbtwvmmgt.functions.supabase.co/get-orders", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        },
+      });
+
+      if (!res.ok) throw new Error("Failed to fetch");
+
+      const data = await res.json();
+      setOrders(data.orders || []);
+    } catch (err) {
+      console.error("Failed to fetch orders:", err);
+    }
+  };
+
+  fetchOrders();
+}, []);
+
 
   return (
     <div className="w-full">
@@ -258,9 +284,52 @@ const AdminDashboard = ({ products, orders }: AdminDashboardProps) => {
               <CardTitle>Order Management</CardTitle>
               <CardDescription>Orders will appear here when customers make purchases.</CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="text-center text-muted-foreground py-10">No orders yet.</div>
+            <CardContent className="space-y-4">
+              {orders.length > 0 ? (
+                orders.map((order) => (
+                  <div
+                    key={order.id}
+                    className="flex justify-between items-center p-4 border rounded-lg"
+                  >
+                    <div>
+                      <p className="font-semibold">Order #{order.id}</p>
+                      <p className="text-sm text-muted-foreground">{order.customerEmail}</p>
+                      {/* <p className="text-sm">Items: {order.items?.map(item => item.name).join(', ')}</p> */}
+                      <p className="text-sm">
+                      Items:{" "}
+                      {(() => {
+                        let parsedItems: any[] = [];
+
+                        if (Array.isArray(order.items)) {
+                          parsedItems = order.items;
+                        } else if (typeof order.items === "string") {
+                          try {
+                            parsedItems = JSON.parse(order.items);
+                          } catch {
+                            parsedItems = [];
+                          }
+                        }
+
+                        return parsedItems.map(item => item.name).join(", ");
+                      })()}
+                    </p>
+
+                    </div>
+                    <div className="text-right">
+                      <p className="font-semibold">KSh {order.total.toLocaleString()}</p>
+                      <Badge variant="outline" className="capitalize">
+                        {order.status}
+                      </Badge>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div className="text-center text-muted-foreground py-10">
+                  No orders found.
+                </div>
+              )}
             </CardContent>
+
           </Card>
         </TabsContent>
 
