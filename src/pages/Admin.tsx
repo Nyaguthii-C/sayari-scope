@@ -129,7 +129,6 @@ const Admin = () => {
         <main className="container mx-auto px-4 py-8">
           <AdminDashboard
             products={products}
-            orders={[]}
           />
         </main>
       </div>
