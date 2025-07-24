@@ -8,7 +8,7 @@ import AdminDashboard from "@/components/AdminDashboard";
 import { Product, Order } from "@/types";
 
 // Demo credentials
-const ADMIN_EMAIL = "admin@maasaicraft.com";
+const ADMIN_EMAIL = "admin@sayariscope.com";
 const ADMIN_PASSWORD = "admin123";
 
 const Admin = () => {
@@ -21,43 +21,43 @@ const Admin = () => {
   const products: Product[] = [
     {
       id: 1,
-      name: "Traditional Kiondo - Large",
+      name: "Advanced Dobsonian telescope",
       price: 2500,
       image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=400&fit=crop",
-      category: "Kiondos",
-      description: "Hand-woven large sisal basket with leather handles",
-      sizes: ["Large"],
-      inStock: 15
+      category: "Telescopes",
+      description: "Large aperture Dobsonian for deep sky observation",
+      sizes: ["200mm"],
+      inStock: 25
     },
     {
       id: 2,
-      name: "Maasai Leather Sandals - Men",
+      name: "Digital Star Projector",
       price: 3200,
       image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=400&fit=crop",
-      category: "Sandals",
-      description: "Authentic Maasai leather sandals handcrafted for men",
-      sizes: ["40", "41", "42", "43", "44", "45"],
-      inStock: 12
+      category: "Projectors",
+      description: "LED star projector with multiple constellation modes",
+      sizes: ["One Size"],
+      inStock: 18
     },
     {
       id: 3,
-      name: "Beaded Maasai Necklace",
+      name: "Inflatable Dome Planetarium Kit",
       price: 1500,
       image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=400&h=400&fit=crop",
       category: "Jewelry",
-      description: "Colorful traditional Maasai beaded necklace",
+      description: "Easy-to-set-up inflatable dome with 360° projection, ideal for immersive astronomy shows",
       sizes: ["One Size"],
-      inStock: 30
+      inStock: 40
     },
     {
       id: 4,
-      name: "Maasai Beaded Keychain",
+      name: "Professional Binoculars 10x50",
       price: 400,
       image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=400&h=400&fit=crop",
-      category: "Keychains",
-      description: "Handcrafted beaded keychain with traditional patterns",
+      category: "Binoculars",
+      description: "High-quality binoculars perfect for stargazing and wildlife",
       sizes: ["One Size"],
-      inStock: 50
+      inStock: 25
     }
   ];
 
@@ -96,21 +96,21 @@ const Admin = () => {
 
   if (isAuthenticated) {
     return (
-      <div className="min-h-screen bg-maasai-white">
-        <header className="bg-maasai-white border-b border-gray-200">
+      <div className="min-h-screen bg-sayari-white">
+        <header className="bg-sayari-white border-b border-gray-200">
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-maasai-gold rounded-full flex items-center justify-center">
-                  <span className="text-maasai-white font-bold text-sm">MC</span>
+                <div className="w-8 h-8 bg-sayari-gold rounded-full flex items-center justify-center">
+                  <span className="text-sayari-white font-bold text-sm">SS</span>
                 </div>
-                <h1 className="text-2xl font-bold text-maasai-black">Maasai Craft Admin</h1>
+                <h1 className="text-2xl font-bold text-sayari-black">SayariScope Admin</h1>
               </div>
               <div className="flex items-center space-x-4">
                 <Button
                   variant="outline"
                   onClick={() => window.location.href = '/'}
-                  className="border-maasai-gold text-maasai-gold hover:bg-maasai-gold hover:text-maasai-white"
+                  className="border-sayari-gold text-sayari-gold hover:bg-sayari-gold hover:text-sayari-white"
                 >
                   Back to Store
                 </Button>
@@ -136,14 +136,14 @@ const Admin = () => {
   }
 
   return (
-    <div className="min-h-screen bg-maasai-white flex items-center justify-center">
+    <div className="min-h-screen bg-sayari-white flex items-center justify-center">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="w-8 h-8 bg-maasai-gold rounded-full flex items-center justify-center">
-              <span className="text-maasai-white font-bold text-sm">MC</span>
+            <div className="w-8 h-8 bg-sayari-gold rounded-full flex items-center justify-center">
+              <span className="text-sayari-white font-bold text-sm">SS</span>
             </div>
-            <h1 className="text-2xl font-bold text-maasai-black">Maasai Craft</h1>
+            <h1 className="text-2xl font-bold text-sayari-black">SayariScope</h1>
           </div>
           <CardTitle>Admin Login</CardTitle>
           <CardDescription>
@@ -159,7 +159,7 @@ const Admin = () => {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@maasaicraft.com"
+                placeholder="admin@sayariscope.com"
                 required
               />
             </div>
@@ -176,7 +176,7 @@ const Admin = () => {
             </div>
             <Button
               type="submit"
-              className="w-full bg-maasai-gold hover:bg-maasai-gold-dark text-maasai-white"
+              className="w-full bg-sayari-gold hover:bg-sayari-gold-dark text-sayari-white"
               disabled={isLoading}
             >
               {isLoading ? "Logging in..." : "Login"}
@@ -184,7 +184,7 @@ const Admin = () => {
           </form>
           <div className="mt-4 text-sm text-center text-gray-600">
             <p>Demo credentials:</p>
-            <p>Email: admin@maasaicraft.com</p>
+            <p>Email: admin@sayariscope.com</p>
             <p>Password: admin123</p>
           </div>
         </CardContent>

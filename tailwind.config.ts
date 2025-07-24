@@ -63,8 +63,8 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Maasai Craft custom colors
-				maasai: {
+				// SayariScope custom colors
+				sayari: {
 					gold: '#D4AF37',
 					'gold-light': '#F5E6A8',
 					'gold-dark': '#B8941F',

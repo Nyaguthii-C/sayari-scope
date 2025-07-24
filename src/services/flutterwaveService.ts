@@ -18,7 +18,7 @@ export const createFlutterwaveConfig = (paymentData: PaymentData) => {
   const { items, total, customerDetails, paymentMethod } = paymentData;
   return {
     public_key: import.meta.env.VITE_FLUTTERWAVE_PUBLIC_KEY,
-    tx_ref: `MC-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
+    tx_ref: `SS-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
     amount: total,
     currency: 'KES',
     payment_options: paymentMethod === 'mpesa' ? 'mobilemoneykenya' : 'card',
@@ -28,7 +28,7 @@ export const createFlutterwaveConfig = (paymentData: PaymentData) => {
       name: customerDetails.name,
     },
     customizations: {
-      title: 'Maasai Craft',
+      title: 'StarScope',
       description: `Payment for ${items.length} item(s)`,
       logo: 'https://the-logo-url.com/logo.png',
     },
