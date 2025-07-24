@@ -146,7 +146,7 @@ useEffect(() => {
               <Card key={i}>
                 <CardHeader className="flex justify-between items-center pb-2">
                   <CardTitle className="text-sm font-medium">{stat.title}</CardTitle>
-                  <stat.icon className="h-4 w-4 text-maasai-gold" />
+                  <stat.icon className="h-4 w-4 text-sayari-gold" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">{stat.value}</div>
@@ -242,7 +242,7 @@ useEffect(() => {
                 <Input value={newProduct.image} onChange={e => setNewProduct({ ...newProduct, image: e.target.value })} />
               </div>
 
-              <Button onClick={handleAddProduct} className="w-full bg-maasai-black text-white">
+              <Button onClick={handleAddProduct} className="w-full bg-sayari-black text-white">
                 Add Product
               </Button>
             </CardContent>
@@ -258,7 +258,7 @@ useEffect(() => {
                     <div>
                       <h4 className="font-semibold">{product.name}</h4>
                       <p className="text-sm text-muted-foreground">{product.category}</p>
-                      <p className="font-semibold text-maasai-gold">KSh {product.price.toLocaleString()}</p>
+                      <p className="font-semibold text-sayari-gold">KSh {product.price.toLocaleString()}</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-2">

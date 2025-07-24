@@ -19,111 +19,112 @@ const Index = () => {
   const products: Product[] = [
     {
       id: 1,
-      name: "Traditional Kiondo - Large",
+      name: "Profesional Refractor Telescope",
       price: 2500,
       image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=400&fit=crop",
-      category: "Kiondos",
-      description: "Hand-woven large sisal basket with leather handles",
-      sizes: ["Large"],
+      category: "Telescopes",
+      description: "High Quality refractor telescope perfect for planetary observation",
+      sizes: ["80mm"],
       inStock: 15
     },
     {
       id: 2,
-      name: "Traditional Kiondo - Medium",
+      name: "Beginner Reflector Telescope",
       price: 1800,
       image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=400&fit=crop",
-      category: "Kiondos",
-      description: "Hand-woven medium sisal basket perfect for shopping",
-      sizes: ["Medium"],
+      category: "Telescopes",
+      description: "Entry-level reflector telescope ideal for moon and planet viewing",
+      sizes: ["114mm"],
       inStock: 20
     },
     {
       id: 3,
-      name: "Traditional Kiondo - Small",
+      name: "Advanced Dobsonian telescope",
       price: 1200,
       image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=400&fit=crop",
-      category: "Kiondos",
-      description: "Compact sisal basket for everyday use",
-      sizes: ["Small"],
+      category: "Telescopes",
+      description: "Large aperture Dobsonian for deep sky observation",
+      sizes: ["200mm"],
       inStock: 25
     },
     {
       id: 4,
-      name: "Maasai Leather Sandals - Men",
-      price: 3200,
-      image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=400&fit=crop",
-      category: "Sandals",
-      description: "Authentic Maasai leather sandals handcrafted for men",
-      sizes: ["40", "41", "42", "43", "44", "45"],
-      inStock: 12
+      name: "Custom Made Telescope",
+      price: 400,
+      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=400&fit=crop",
+      category: "Telescopes",
+      description: "Handcrafted telescope",
+      sizes: ["One Size"],
+      inStock: 7
     },
     {
       id: 5,
-      name: "Maasai Leather Sandals - Women",
-      price: 2800,
+      name: "Home Planetarium Projector",
+      price: 3200,
       image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=400&fit=crop",
-      category: "Sandals",
-      description: "Elegant Maasai leather sandals for women",
-      sizes: ["36", "37", "38", "39", "40", "41"],
-      inStock: 18
+      category: "Projectors",
+      description: "Educational planetarium projector for home use",
+      sizes: ["One Size"],
+      inStock: 12
     },
     {
       id: 6,
-      name: "Beaded Maasai Necklace",
+      name: "Digital Star Projector",
+      price: 2800,
+      image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=400&fit=crop",
+      category: "Projectors",
+      description: "LED star projector with multiple constellation modes",
+      sizes: ["One Size"],
+      inStock: 18
+    },
+    {
+      id: 7,
+      name: "Portable Digital Planetarium",
       price: 1500,
       image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=400&h=400&fit=crop",
-      category: "Jewelry",
-      description: "Colorful traditional Maasai beaded necklace",
+      category: "Planetariums",
+      description: "Compact mobile planetarium system with HD projection ideal for schools and events",
       sizes: ["One Size"],
       inStock: 30
     },
     {
-      id: 7,
-      name: "Beaded Maasai Bracelet Set",
+      id: 8,
+      name: "Inflatable Dome Planetarium Kit",
       price: 800,
       image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=400&h=400&fit=crop",
-      category: "Jewelry",
-      description: "Set of 3 traditional Maasai beaded bracelets",
+      category: "Planetariums",
+      description: "Easy-to-set-up inflatable dome with 360° projection, ideal for immersive astronomy shows",
       sizes: ["One Size"],
       inStock: 40
     },
-    {
-      id: 8,
-      name: "Maasai Beaded Keychain - Traditional",
-      price: 400,
-      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=400&h=400&fit=crop",
-      category: "Keychains",
-      description: "Handcrafted beaded keychain with traditional patterns",
-      sizes: ["One Size"],
-      inStock: 50
-    },
+
     {
       id: 9,
-      name: "Maasai Warrior Shield Keychain",
+      name: "Professional Binoculars 10x50",
       price: 600,
       image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=400&h=400&fit=crop",
-      category: "Keychains",
-      description: "Miniature warrior shield keychain with authentic Maasai patterns",
+      category: "Binoculars",
+      description: "High-quality binoculars perfect for stargazing and wildlife",
       sizes: ["One Size"],
       inStock: 35
     },
     {
       id: 10,
-      name: "Maasai Animal Spirit Keychain Set",
+      name: "waterproof binoculars 12x50",
       price: 800,
       image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=400&h=400&fit=crop",
-      category: "Keychains",
-      description: "Set of 3 keychains featuring lion, elephant, and buffalo designs",
+      category: "Binoculars",
+      description: "Weather-resistant binoculars for all condition viewing",
       sizes: ["One Size"],
       inStock: 25
     },
     {
       id: 11,
-      name: "Maasai Leather & Bead Keychain",
+      name: "Astronomy Binoculars 15x70",
       price: 700,
       image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=400&h=400&fit=crop",
-      category: "Keychains",
-      description: "Premium leather keychain with colorful Maasai beadwork",
+      category: "Binoculars",
+      description: "Large aperture binoculars designed for astronomical viewing",
       sizes: ["One Size"],
       inStock: 40
     }
@@ -169,7 +170,7 @@ const Index = () => {
     return cartItems.reduce((total, item) => total + item.quantity, 0);
   };
 
-  const categories = ["All", "Kiondos", "Sandals", "Jewelry", "Keychains"];
+  const categories = ["All", "Telescopes", "Binoculars", "Planetariums", "Projectors"];
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const filteredProducts = selectedCategory === "All" 
@@ -177,24 +178,24 @@ const Index = () => {
     : products.filter(product => product.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-maasai-white">
+    <div className="min-h-screen bg-sayari-white">
       {/* Header */}
-      <header className="bg-maasai-white border-b border-gray-200 sticky top-0 z-50">
+      <header className="bg-sayari-white border-b border-gray-200 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-maasai-gold rounded-full flex items-center justify-center">
-                <span className="text-maasai-white font-bold text-sm">MC</span>
+              <div className="w-8 h-8 bg-sayari-gold rounded-full flex items-center justify-center">
+                <span className="text-sayari-white font-bold text-sm">SS</span>
               </div>
-              <h1 className="text-2xl font-bold text-maasai-black">Maasai Craft</h1>
+              <h1 className="text-2xl font-bold text-sayari-black">SayariScope</h1>
             </div>
             
             {/* Desktop Navigation - removed admin button */}
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-maasai-black hover:text-maasai-gold transition-colors">Home</a>
-              <a href="#products" className="text-maasai-black hover:text-maasai-gold transition-colors">Products</a>
-              <a href="#about" className="text-maasai-black hover:text-maasai-gold transition-colors">About</a>
-              <a href="#contact" className="text-maasai-black hover:text-maasai-gold transition-colors">Contact</a>
+              <a href="#" className="text-sayari-black hover:text-sayari-gold transition-colors">Home</a>
+              <a href="#products" className="text-sayari-black hover:text-sayari-gold transition-colors">Products</a>
+              <a href="#about" className="text-sayari-black hover:text-sayari-gold transition-colors">About</a>
+              <a href="#contact" className="text-sayari-black hover:text-sayari-gold transition-colors">Contact</a>
             </nav>
             
             <div className="flex items-center space-x-4">
@@ -202,11 +203,11 @@ const Index = () => {
                 variant="outline"
                 size="sm"
                 onClick={() => setIsCartOpen(true)}
-                className="relative border-maasai-gold text-maasai-gold hover:bg-maasai-gold hover:text-maasai-white"
+                className="relative border-sayari-gold text-sayari-gold hover:bg-sayari-gold hover:text-sayari-white"
               >
                 <ShoppingCart className="w-4 h-4" />
                 {getTotalItems() > 0 && (
-                  <Badge className="absolute -top-2 -right-2 bg-maasai-gold text-maasai-white">
+                  <Badge className="absolute -top-2 -right-2 bg-sayari-gold text-sayari-white">
                     {getTotalItems()}
                   </Badge>
                 )}
@@ -228,10 +229,10 @@ const Index = () => {
           {isMobileMenuOpen && (
             <nav className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
               <div className="flex flex-col space-y-2">
-                <a href="#" className="text-maasai-black hover:text-maasai-gold transition-colors py-2">Home</a>
-                <a href="#products" className="text-maasai-black hover:text-maasai-gold transition-colors py-2">Products</a>
-                <a href="#about" className="text-maasai-black hover:text-maasai-gold transition-colors py-2">About</a>
-                <a href="#contact" className="text-maasai-black hover:text-maasai-gold transition-colors py-2">Contact</a>
+                <a href="#" className="text-sayari-black hover:text-sayari-gold transition-colors py-2">Home</a>
+                <a href="#products" className="text-sayari-black hover:text-sayari-gold transition-colors py-2">Products</a>
+                <a href="#about" className="text-sayari-black hover:text-sayari-gold transition-colors py-2">About</a>
+                <a href="#contact" className="text-sayari-black hover:text-sayari-gold transition-colors py-2">Contact</a>
               </div>
             </nav>
           )}
@@ -239,18 +240,18 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-maasai-white to-maasai-gold-light py-20">
+      <section className="bg-gradient-to-r from-sayari-white to-sayari-gold-light py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-5xl font-bold text-maasai-black mb-6">
-            Authentic Maasai Crafts
+          <h2 className="text-5xl font-bold text-sayari-black mb-6">
+            Explore the Universe
           </h2>
-          <p className="text-xl text-maasai-black-light mb-8 max-w-2xl mx-auto">
-            Discover the beauty of traditional Maasai craftsmanship. From hand-woven kiondos to beaded jewelry, 
-            each piece tells a story of heritage and artistry.
+          <p className="text-xl text-sayari-black-light mb-8 max-w-2xl mx-auto">
+            Discover the wonders of space with our premium collection of telescopes, mobile planetariums, and binoculars. 
+            From beginner stargazers to professional astronomers, we have the perfect instrument for your cosmic journey.
           </p>
           <Button 
             size="lg" 
-            className="bg-maasai-black hover:bg-maasai-black-light text-maasai-white px-8 py-3 text-lg"
+            className="bg-sayari-black hover:bg-sayari-black-light text-sayari-white px-8 py-3 text-lg"
             onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Shop Now
@@ -261,7 +262,7 @@ const Index = () => {
       {/* Products Section */}
       <section id="products" className="py-16">
         <div className="container mx-auto px-4">
-          <h3 className="text-4xl font-bold text-maasai-black text-center mb-12">Our Collection</h3>
+          <h3 className="text-4xl font-bold text-sayari-black text-center mb-12">Our Collection</h3>
           
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -271,8 +272,8 @@ const Index = () => {
                 variant={selectedCategory === category ? "default" : "outline"}
                 onClick={() => setSelectedCategory(category)}
                 className={selectedCategory === category 
-                  ? "bg-maasai-gold hover:bg-maasai-gold-dark text-maasai-white"
-                  : "border-maasai-gold text-maasai-gold hover:bg-maasai-gold hover:text-maasai-white"
+                  ? "bg-sayari-gold hover:bg-sayari-gold-dark text-sayari-white"
+                  : "border-sayari-gold text-sayari-gold hover:bg-sayari-gold hover:text-sayari-white"
                 }
               >
                 {category}
@@ -294,56 +295,56 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 bg-maasai-gold-light">
+      <section id="about" className="py-16 bg-sayari-gold-light">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-4xl font-bold text-maasai-black mb-8">About Maasai Craft</h3>
-            <p className="text-lg text-maasai-black-light mb-6">
-              We are dedicated to preserving and sharing the rich cultural heritage of the Maasai people through 
-              authentic handcrafted products. Each item in our collection is carefully made by skilled artisans 
-              using traditional techniques passed down through generations.
+            <h3 className="text-4xl font-bold text-sayari-black mb-8">About SayariScope</h3>
+            <p className="text-lg text-sayari-black-light mb-6">
+              We are passionate about bringing the cosmos closer to everyone.
+              Our carefully curated collection features premium telescopes, innovative mobile planetariums, and precision binoculars from leading manufacturers.
+              Each product is selected for its quality, performance, and ability to inspire wonder.
             </p>
-            <p className="text-lg text-maasai-black-light">
-              By purchasing from us, you're not just buying a product – you're supporting local communities 
-              and helping preserve invaluable cultural traditions.
+            <p className="text-lg text-sayari-black-light">
+              Whether you're a curious beginner or an experienced astronomer, our expert team is here to help you find the perfect instrument to explore the night sky and beyond.
+
             </p>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-maasai-black text-maasai-white py-12">
+      <footer className="bg-sayari-black text-sayari-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-maasai-gold rounded-full flex items-center justify-center">
-                  <span className="text-maasai-white font-bold text-sm">MC</span>
+                <div className="w-8 h-8 bg-sayari-gold rounded-full flex items-center justify-center">
+                  <span className="text-sayari-white font-bold text-sm">SS</span>
                 </div>
-                <h3 className="text-xl font-bold">Maasai Craft</h3>
+                <h3 className="text-xl font-bold">SayariScope</h3>
               </div>
               <p className="text-gray-400">
-                Authentic Maasai crafts made with love and tradition.
+                Premium astronomy equipment for stargazers and professionals.
               </p>
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-maasai-gold transition-colors">Home</a></li>
-                <li><a href="#products" className="text-gray-400 hover:text-maasai-gold transition-colors">Products</a></li>
-                <li><a href="#about" className="text-gray-400 hover:text-maasai-gold transition-colors">About</a></li>
-                <li><a href="#contact" className="text-gray-400 hover:text-maasai-gold transition-colors">Contact</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-sayari-gold transition-colors">Home</a></li>
+                <li><a href="#products" className="text-gray-400 hover:text-sayari-gold transition-colors">Products</a></li>
+                <li><a href="#about" className="text-gray-400 hover:text-sayari-gold transition-colors">About</a></li>
+                <li><a href="#contact" className="text-gray-400 hover:text-sayari-gold transition-colors">Contact</a></li>
               </ul>
             </div>
             <div id="contact">
               <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
-              <p className="text-gray-400 mb-2">Email: info@maasaicraft.com</p>
+              <p className="text-gray-400 mb-2">Email: info@sayariscope.com</p>
               <p className="text-gray-400 mb-2">Phone: +254 700 123 456</p>
               <p className="text-gray-400">Nairobi, Kenya</p>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p className="text-gray-400">&copy; 2024 Maasai Craft. All rights reserved.</p>
+            <p className="text-gray-400">&copy; 2025 SayariScope. All rights reserved.</p>
           </div>
         </div>
       </footer>
@@ -367,7 +368,7 @@ const ProductCard = ({ product, onAddToCart }: { product: Product; onAddToCart: 
   const [isLiked, setIsLiked] = useState(false);
 
   return (
-    <Card className="group hover:shadow-lg transition-all duration-300 border-gray-200 hover:border-maasai-gold">
+    <Card className="group hover:shadow-lg transition-all duration-300 border-gray-200 hover:border-sayari-gold">
       <div className="relative overflow-hidden">
         <img
           src={product.image}
@@ -377,7 +378,7 @@ const ProductCard = ({ product, onAddToCart }: { product: Product; onAddToCart: 
         <Button
           variant="ghost"
           size="sm"
-          className="absolute top-2 right-2 bg-maasai-white/80 hover:bg-maasai-white"
+          className="absolute top-2 right-2 bg-sayari-white/80 hover:bg-sayari-white"
           onClick={() => setIsLiked(!isLiked)}
         >
           <Heart className={`w-4 h-4 ${isLiked ? 'fill-red-500 text-red-500' : 'text-gray-600'}`} />
@@ -386,36 +387,36 @@ const ProductCard = ({ product, onAddToCart }: { product: Product; onAddToCart: 
       <CardHeader>
         <div className="flex justify-between items-start">
           <div>
-            <CardTitle className="text-maasai-black group-hover:text-maasai-gold transition-colors">
+            <CardTitle className="text-sayari-black group-hover:text-sayari-gold transition-colors">
               {product.name}
             </CardTitle>
-            <CardDescription className="text-maasai-black-light">
+            <CardDescription className="text-sayari-black-light">
               {product.description}
             </CardDescription>
           </div>
           <div className="flex items-center space-x-1">
-            <Star className="w-4 h-4 fill-maasai-gold text-maasai-gold" />
+            <Star className="w-4 h-4 fill-sayari-gold text-sayari-gold" />
             <span className="text-sm text-gray-600">4.8</span>
           </div>
         </div>
       </CardHeader>
       <CardContent>
         <div className="flex justify-between items-center mb-4">
-          <span className="text-2xl font-bold text-maasai-black">
+          <span className="text-2xl font-bold text-sayari-black">
             KSh {product.price.toLocaleString()}
           </span>
-          <Badge variant="secondary" className="bg-maasai-gold-light text-maasai-black">
+          <Badge variant="secondary" className="bg-sayari-gold-light text-sayari-black">
             {product.inStock} in stock
           </Badge>
         </div>
         
         {product.sizes.length > 1 && (
           <div className="mb-4">
-            <label className="block text-sm font-medium text-maasai-black mb-2">Size:</label>
+            <label className="block text-sm font-medium text-sayari-black mb-2">Size:</label>
             <select
               value={selectedSize}
               onChange={(e) => setSelectedSize(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded-md focus:ring-maasai-gold focus:border-maasai-gold"
+              className="w-full p-2 border border-gray-300 rounded-md focus:ring-sayari-gold focus:border-sayari-gold"
             >
               {product.sizes.map(size => (
                 <option key={size} value={size}>{size}</option>
@@ -445,7 +446,7 @@ const ProductCard = ({ product, onAddToCart }: { product: Product; onAddToCart: 
         
         <Button
           onClick={() => onAddToCart(product, selectedSize)}
-          className="w-full bg-maasai-gold hover:bg-maasai-gold-dark text-maasai-white"
+          className="w-full bg-sayari-gold hover:bg-sayari-gold-dark text-sayari-white"
         >
           <ShoppingCart className="w-4 h-4 mr-2" />
           Add to Cart
